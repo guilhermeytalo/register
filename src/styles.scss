@@ -1,4 +1,10 @@
-html, body { height: 100%; }
+html, body {
+  app-register {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+}
 body { margin: 0; font-family: Arial, sans-serif; }
 
 .font-bold {

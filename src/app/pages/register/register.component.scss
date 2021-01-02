@@ -1,3 +1,8 @@
+.custom-row {
+  height: 100%;
+  margin: 0;
+}
+
 .alert-success {
   color: #fff;
   background-color: #2ecc71;
@@ -12,6 +17,8 @@
   margin-top: 18px;
   justify-content: end;
   padding-right: 40px;
+  position: absolute;
+  z-index: 1;
 }
 
 .alert {
@@ -21,15 +28,25 @@
   border-radius: 0;
   width: 100%;
   left: 0;
+  z-index: 2;
 }
 
 .contraction-text {
   padding: 0 76px;
 }
 
+.img {
+  background-image: url(/assets/bs-woman.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.7);
+  width: 100%;
+  height: 100%;
+}
+
 .img-content {
   width: 100%;
-  height: 100vh;
+  padding: 0;
   .img-text {
     position: absolute;
     top: 66%;
@@ -39,14 +56,6 @@
     color: #fff;
     padding: 0 33px 0 0;
     right: 0;
-    // font-size: 1vw !important;
-  }
-  img {
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-    filter: brightness(0.7);
   }
   p {
     font-size: 20px;
@@ -66,7 +75,6 @@
     letter-spacing: normal;
     text-align: right;
   }
-
 }
 
 .eye-icon {
@@ -75,26 +83,18 @@
   top: 38px;
 }
 
-.form-check-custom {
+.form-check-border {
   border: 1px solid #e6e6e6;
-  margin-left: 16px;
-  padding-top: 10px;
-  padding-right: 18px;
+  padding: 6px 116px 0 20px;
+  min-height: 56px;
   border-radius: 3px;
-  padding-left: 2.25rem;
 }
 
 .form-check-input {
-  position: absolute;
-  margin-top: .3rem;
-  margin-left: -1.25rem;
   width: 24px;
   height: 24px;
-}
-
-.form-check-label {
-  padding-left: 10px;
-  padding-right: 132px;
+  margin-left: -2rem;
+  position: absolute;
 }
 
 .light-blue {
@@ -154,6 +154,7 @@
     margin-top: 0;
     left: 0;
     height: 64px;
+    z-index: 2;
   }
 }
 
@@ -180,6 +181,7 @@
     margin-top: 0;
     left: 0;
     height: 64px;
+    z-index: 2;
   }
 
   .img-content {
@@ -207,6 +209,7 @@
     margin-top: 0;
     left: 0;
     height: 64px;
+    z-index: 2;
   }
 
   .eye-icon {

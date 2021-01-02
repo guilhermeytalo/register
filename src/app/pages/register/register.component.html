@@ -1,144 +1,155 @@
-<div class="row">
+<div>
+  <div class="row custom-row">
 
-  <div class="col-lg-6 img-content">
-    <img src="./assets/bs-woman.jpg" alt="business-woman">
-    <div class="img-text">
-      <p>"Obtive crédito para capital de giro. O processo foi bem sucedido e tudo que foi abordado, foi cumprido."</p>
-      <h6><span class="font-bold">Camila Bragança,</span><br>
-        Sideral Tecnologia</h6>
+    <div class="col-lg-6 img-content">
+      <div class="img"></div>
+      <div class="img-text">
+        <p>"Obtive crédito para capital de giro. O processo foi bem sucedido e tudo que foi abordado, foi cumprido."</p>
+        <h6><span class="font-bold">Camila Bragança,</span><br>
+          Sideral Tecnologia</h6>
+      </div>
     </div>
-  </div>
 
 
-  <div class="col-lg-6">
-    <div class="row">
-      <div *ngIf="isValid && registerForm.valid" class="alert col-sm-12 col-md-12 col-lg-12 alert-success" role="alert">
+    <div class="col-lg-6">
+      <div class="row">
+        <div *ngIf="isValid && registerForm.valid" class="alert col-sm-12 col-md-12 col-lg-12 alert-success" role="alert">
                <span class="font-16">
                  Parabéns! Cadastro realizado com sucesso!
                </span>
+        </div>
+
+        <div class="logo col-lg-12">
+          <img src="./assets/logo.png" alt="Bcredi-logo">
+        </div>
+
+
       </div>
-
-      <!--      <div class="logo col-lg-12">
-              <img src="./assets/logo.png" alt="Bcredi-logo">
-            </div>-->
-
-
-    </div>
-    <div class="row justify-content-md-center">
-      <div class="col-lg-8">
-        <div class="container">
-          <div class="row margin-top-large">
-            <div class="row text-center">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <h1 class="font-24 font-bold">Criar meu cadastro</h1>
-                <p class="font-16 contraction-text font-normal grey">Para acompanhar sua contratação de crédito você utilizará seu e-mail e
-                  CPF.</p>
+      <div class="row justify-content-md-center">
+        <div class="col-lg-8">
+          <div class="container">
+            <div class="row margin-top-large">
+              <div class="row text-center">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                  <h1 class="font-24 font-bold">Criar meu cadastro</h1>
+                  <p class="font-16 contraction-text font-normal grey">Para acompanhar sua contratação de crédito você utilizará seu e-mail e
+                    CPF.</p>
+                </div>
               </div>
-            </div>
 
-            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
-              <div class="row">
-                <div class="form-group col-sm-12 col-md-12 col-lg-12">
-                  <label for="email" class="font-14 grey">E-mail</label>
-                  <input placeholder="Digite seu e-mail" type="email" id="email" class="form-control" name="email"
-                         formControlName="email">
-                  <div *ngIf="isValid && registerForm.controls.email.invalid" class="error-form font-14">
+                <div class="row">
+                  <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                    <label for="email" class="font-14 grey">E-mail</label>
+                    <input placeholder="Digite seu e-mail" type="email" id="email" class="form-control" name="email"
+                           formControlName="email">
+                    <div *ngIf="isValid && registerForm.controls.email.invalid" class="error-form font-14">
               <span *ngIf="registerForm.controls.email.errors.required">
                  O campo e-mail é obrigatório
               </span>
-                    <span *ngIf="registerForm.controls.email.errors.pattern">
+                      <span *ngIf="registerForm.controls.email.errors.pattern">
                 O e-mail digitado é invalido
               </span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="row">
-                <!--CPF-->
-                <div class="form-group col-sm-12 col-md-12 col-lg-6">
-                  <label for="cpf" class="font-14 grey">CPF</label>
-                  <input placeholder="998.776.788-70" mask="000.000.000-00" type="text" id="cpf" class="form-control"
-                         name="cpf" formControlName="cpf"/>
-                  <div *ngIf="isValid && registerForm.controls.cpf.invalid" class="error-form font-14">
+                <div class="row">
+                  <!--CPF-->
+                  <div class="form-group col-sm-12 col-md-12 col-lg-6">
+                    <label for="cpf" class="font-14 grey">CPF</label>
+                    <input placeholder="998.776.788-70" mask="000.000.000-00" type="text" id="cpf" class="form-control"
+                           name="cpf" formControlName="cpf"/>
+                    <div *ngIf="isValid && registerForm.controls.cpf.invalid" class="error-form font-14">
               <span *ngIf="registerForm.controls.cpf.errors.required">
                 O campo CPF é obrigatório
               </span>
-                    <span *ngIf="registerForm.controls.cpf.errors.pattern">
+                      <span *ngIf="registerForm.controls.cpf.errors.pattern">
                 O CPF é invalido
               </span>
+                    </div>
                   </div>
-                </div>
 
-                <!--Birth-->
-                <div class="form-group col-sm-12 col-md-12 col-lg-6">
-                  <label for="birth" class="font-14 grey">Data de nascimento</label>
-                  <input placeholder="21/12/1990" mask="00/00/0000" type="text" id="birth" class="form-control"
-                         name="birth"
-                         formControlName="birth">
-                  <div *ngIf="isValid && registerForm.controls.birth.invalid" class="error-form font-14">
+                  <!--Birth-->
+                  <div class="form-group col-sm-12 col-md-12 col-lg-6">
+                    <label for="birth" class="font-14 grey">Data de nascimento</label>
+                    <input placeholder="21/12/1990" mask="00/00/0000" type="text" id="birth" class="form-control"
+                           name="birth"
+                           formControlName="birth">
+                    <div *ngIf="isValid && registerForm.controls.birth.invalid" class="error-form font-14">
               <span *ngIf="registerForm.controls.birth.errors.required">
                 O campo data de nascimento é obrigatório
               </span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
 
-              <div class="row">
-                <!--Password-->
-                <div class="form-group col-sm-12 col-md-12 col-lg-12">
-                  <label for="password" class="font-14 grey">Senha</label>
-                  <input  placeholder="Cadastre uma senha" [type]="passwordView ? 'text' : 'password'" id="password" class="form-control"
-                          formControlName="password">
-                  <fa-icon class="eye-icon grey" (click)="showPassword()" [icon]="passwordView ? faEyeSlash : faEye"></fa-icon>
-                  <div *ngIf="isValid && registerForm.controls.password.invalid" class="error-form font-14">
+                <div class="row">
+                  <!--Password-->
+                  <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                    <label for="password" class="font-14 grey">Senha</label>
+                    <input  placeholder="Cadastre uma senha" [type]="passwordView ? 'text' : 'password'" id="password" class="form-control"
+                            formControlName="password">
+                    <fa-icon class="eye-icon grey" (click)="showPassword()" [icon]="passwordView ? faEyeSlash : faEye"></fa-icon>
+                    <div *ngIf="isValid && registerForm.controls.password.invalid" class="error-form font-14">
                 <span *ngIf="registerForm.controls.password.errors.required">
                   O campo senha é obrigatório
                 </span>
-                    <span *ngIf="registerForm.controls.password.errors.minLength">
+                      <span *ngIf="registerForm.controls.password.errors.minLength">
                   Sua senha precisa possuir pelo menos 4 digitos
                 </span>
+                    </div>
+                  </div>
+
+                  <!--Termos de uso-->
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-check-border">
+                      <div class="form-check">
+                        <input id="check" class="form-check-input" type="checkbox" formControlName="check">
+                        <label class="form-check-label font-12" for="check">
+                    <span class="light-grey">
+                      Li e estou de acordo com a <a href="#">Política de Privacidade</a> e a <a href="#">Política de Uso de
+                      Informações.</a>
+                    </span>
+                        </label>
+
+                      </div>
+                    </div>
+
+                    <div *ngIf="isValid && registerForm.controls.check.invalid" class="error-form font-14">
+              <span *ngIf="registerForm.controls.check.errors.required">
+                Você precisa concordar com os termos de uso para poder efetuar o cadastro
+              </span>
+                    </div>
+                  </div>
+
+
+
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <button type="button" class="light-blue btn-block font-16" (click)="onSubmit()">
+                      <fa-icon [icon]="faLock"></fa-icon>
+                      Cadastrar
+                    </button>
                   </div>
                 </div>
 
-                <!--Termos de uso-->
-                <div class="form-check-custom col-sm-12 col-md-12 col-lg-12">
-                  <input id="check" class="form-check-input" type="checkbox" formControlName="check">
-                  <label class="form-check-label font-12" for="check">
-                  <span class="light-grey">
-                    Li e estou de acordo com a <a href="#">Política de Privacidade</a> e a <a href="#">Política de Uso de
-                    Informações.</a>
-                  </span>
-                  </label>
-                  <div *ngIf="isValid && registerForm.controls.check.invalid" class="error-form font-14">
-                <span *ngIf="registerForm.controls.check.errors.required">
-                  Você precisa concordar com os termos de uso para poder efetuar o cadastro
-                </span>
-                  </div>
-                </div>
+              </form>
 
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                  <button type="button" class="light-blue btn-block font-16" (click)="onSubmit()">
-                    <fa-icon [icon]="faLock"></fa-icon>
-                    Cadastrar
-                  </button>
-                </div>
+
+              <div class="register-content text-center font-14">
+                <div class="border-top"></div>
+                <span>Já fiz meu cadastro. <a href="#">Entrar agora</a> </span>
               </div>
 
-            </form>
-
-
-            <div class="register-content text-center font-14">
-              <div class="border-top"></div>
-              <span>Já fiz meu cadastro. <a href="#">Entrar agora</a> </span>
             </div>
 
           </div>
-
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
+
