@@ -22,8 +22,8 @@ $ npm install -g @angular/cli
 Após fazer as instalações necessárias clone o repositório na sua máquina com os seguintes comandos abaixo.
 
 ```shell
-$ git clone https://github.com/guilhermeytalo/bcredi-frontend-challenge.git
-$ cd bcredi-frontend-challenge
+$ git clone https://github.com/guilhermeytalo/register.git
+$ cd register
 $ npm install
 ```
 
