@@ -37,12 +37,9 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(): any {
     this.isValid = true;
-    console.log(this.isValid);
     if (!this.registerForm.valid) {
-      console.log(this.registerForm.valid);
       return;
     }
-    console.log(this.registerForm.value);
   }
 
   showPassword(): any {
